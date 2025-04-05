@@ -1,15 +1,10 @@
 public class Hello {
     public static void main(String[] args) {
-        String name = null;
-
-        if (args.length > 0) {
-            name = args[0];
+        String name = System.getenv("USERNAME_VAR");
+        if (name != null) {
+            System.out.println("Hello, " + name);
         } else {
-            Scanner sc = new Scanner(System.in);
-            System.out.print("Enter your name: ");
-            name = sc.nextLine();
+            System.out.println("Environment variable not set!");
         }
 
-        System.out.println("Hello, " + name);
-    }
-}
+
