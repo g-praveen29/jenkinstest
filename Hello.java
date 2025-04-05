@@ -6,5 +6,8 @@ public class Hello {
         } else {
             System.out.println("Environment variable not set!");
         }
+            }
+}
+
 
 
